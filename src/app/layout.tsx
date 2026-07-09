@@ -1,0 +1,32 @@
+import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+export const metadata: Metadata = {
+  title: "Gaurav Saini | Archery Coach",
+  description: "Portfolio of Gaurav Saini, professional archer and coach. Explore achievements, coaching programs, and contact details.",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
+      <body className="min-h-full flex flex-col selection:bg-[#ffd700]/30 selection:text-white">
+        {children}
+      </body>
+    </html>
+  );
+}

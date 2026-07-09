@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+:root {
+  --background: #050816;
+  --foreground: #f8fafc;
+  --surface: rgba(15, 23, 42, 0.8);
+  --surface-strong: rgba(15, 23, 42, 0.95);
+  --brand: #ffd700;
+  --muted: #94a3b8;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.16), transparent 22%),
+    radial-gradient(circle at bottom left, rgba(236, 72, 153, 0.14), transparent 20%),
+    linear-gradient(180deg, #020617 0%, #07101f 100%);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html.light,
+body.light {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --surface: rgba(248, 250, 252, 0.9);
+  --surface-strong: rgba(255, 255, 255, 0.95);
+  --brand: #b45309;
+  --muted: #64748b;
+  background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.14), transparent 22%),
+    radial-gradient(circle at bottom left, rgba(245, 158, 11, 0.12), transparent 20%),
+    linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+  color-scheme: light;
+}
+
+html.dark,
+body.dark {
+  color-scheme: dark;
+  --background: #050816;
+  --foreground: #f8fafc;
+  --surface: rgba(15, 23, 42, 0.8);
+  --surface-strong: rgba(15, 23, 42, 0.95);
+  --brand: #ffd700;
+  --muted: #94a3b8;
+  background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.16), transparent 22%),
+    radial-gradient(circle at bottom left, rgba(236, 72, 153, 0.14), transparent 20%),
+    linear-gradient(180deg, #020617 0%, #07101f 100%);
+}
+
+html.light body,
+html.light .bg-slate-950,
+html.light .bg-slate-950\/90,
+html.light .bg-slate-950\/80,
+html.light .bg-slate-950\/95,
+html.light .bg-slate-900\/80,
+html.light .bg-slate-950\/70,
+html.light .bg-slate-900,
+html.light .bg-slate-900\/90,
+html.light .bg-slate-900\/70 {
+  background-color: #f8fafc !important;
+}
+
+html.light .bg-white\/10,
+html.light .bg-white\/5,
+html.light .bg-white\/20,
+html.light .bg-white\/30 {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+html.light .hero-section {
+  background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 30%),
+    linear-gradient(135deg, rgba(248, 250, 252, 0.98) 0%, rgba(241, 245, 249, 1) 100%) !important;
+}
+
+html.light .hero-overlay {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.95));
+  mix-blend-mode: normal;
+}
+
+html.light .hero-section .text-white,
+html.light .hero-section .text-slate-300,
+html.light .hero-section .text-slate-400,
+html.light .hero-section .text-slate-500,
+html.light .hero-section .text-slate-600,
+html.light .text-white,
+html.light .text-slate-300,
+html.light .text-slate-400,
+html.light .text-slate-500,
+html.light .text-slate-600,
+html.light .text-slate-700,
+html.light .text-slate-800,
+html.light .text-slate-900,
+html.light [class~="text-[#FFD700]"] {
+  color: #0f172a !important;
+}
+
+html.light .border-white\/10,
+html.light .border-white\/20,
+html.light .border-slate-200,
+html.light .border-slate-300 {
+  border-color: rgba(15, 23, 42, 0.12) !important;
+}
+
+html.light .shadow-xl,
+html.light .shadow-2xl,
+html.light .shadow-lg {
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08) !important;
+}
+
+html.light .testimonial-panel {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.92), rgba(248, 250, 252, 0.96) 48%, rgba(255, 255, 255, 0.92));
+  border-color: rgba(15, 23, 42, 0.08) !important;
+  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.08) !important;
+}
+
+::selection {
+  background: rgba(255, 215, 0, 0.24);
+  color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
