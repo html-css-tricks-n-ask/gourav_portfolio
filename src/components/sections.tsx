@@ -35,22 +35,18 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    const stored = typeof window !== "undefined" ? window.localStorage.getItem("theme") : null;
-    const prefersDark = typeof window !== "undefined" ? window.matchMedia("(prefers-color-scheme: dark)").matches : false;
-    const initialTheme = stored === "light" || stored === "dark" ? stored : prefersDark ? "dark" : "light";
-
-    const applyTheme = (themeName: "light" | "dark") => {
+    const applyTheme = () => {
       if (typeof window === "undefined") return;
       const root = document.documentElement;
       const body = document.body;
       [root, body].forEach((el) => {
         el.classList.remove("light", "dark");
-        el.classList.add(themeName);
-        el.dataset.theme = themeName;
+        el.classList.add("dark");
+        el.dataset.theme = "dark";
       });
     };
 
-    applyTheme(initialTheme);
+    applyTheme();
   }, []);
 
   return (
@@ -310,11 +306,11 @@ export function ContactSection() {
           <SectionHeading eyebrow="Contact" title="Let’s build the next milestone together." description="Reach out for training, collaboration, or a conversation around performance and coaching." />
           <div className="space-y-4 text-slate-300">
             <a href="mailto:gaurav@saini.com" className="flex items-center gap-3"><IoMdMail className="text-[#FFD700]" /> gaurav@saini.com</a>
-            <a href="tel:+919999999999" className="flex items-center gap-3"><IoMdPhonePortrait className="text-[#FFD700]" /> +91 99999 99999</a>
+            <a href="tel:+919289383901" className="flex items-center gap-3"><IoMdPhonePortrait className="text-[#FFD700]" /> +91 92893 83901</a>
             <a href="https://instagram.com" className="flex items-center gap-3"><FaInstagram className="text-[#FFD700]" /> Instagram</a>
             <a href="https://facebook.com" className="flex items-center gap-3"><FaFacebook className="text-[#FFD700]" /> Facebook</a>
             <a href="https://youtube.com" className="flex items-center gap-3"><FaYoutube className="text-[#FFD700]" /> YouTube</a>
-            <a href="https://wa.me/919999999999" className="flex items-center gap-3"><FaWhatsapp className="text-[#FFD700]" /> WhatsApp</a>
+            <a href="https://wa.me/919289383901" className="flex items-center gap-3"><FaWhatsapp className="text-[#FFD700]" /> WhatsApp</a>
           </div>
         </div>
         <form className="space-y-4 rounded-[1.5rem] border border-white/10 bg-slate-950/70 p-6 shadow-xl shadow-[#000000]/20 backdrop-blur-xl">
