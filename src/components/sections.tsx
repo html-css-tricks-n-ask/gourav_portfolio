@@ -37,8 +37,11 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/90 backdrop-blur-xl">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-        <Link href="#home" className="text-xl font-semibold tracking-[0.25em] text-[#FFD700]">
-          GOURAV
+        <Link href="#home" className="flex items-center gap-3 text-xl font-semibold tracking-[0.25em] text-[#FFD700]">
+          <span className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#FFD700]/30 bg-[#FFD700]/10 text-sm font-black uppercase tracking-[0.3em] text-[#FFD700]">
+            GS
+          </span>
+          <span>GOURAV</span>
         </Link>
 
         <div className="hidden items-center gap-6 text-sm text-slate-300 md:flex">
