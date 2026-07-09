@@ -13,8 +13,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Gaurav Saini | Archery Coach",
-  description: "Portfolio of Gaurav Saini, professional archer and coach. Explore achievements, coaching programs, and contact details.",
+  title: "Gourav Saini | Archery Coach",
+  description: "Portfolio of Gourav Saini, professional archer and coach. Explore achievements, coaching programs, and contact details.",
+  themeColor: "#FFD700",
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
