@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FaArrowDown, FaInstagram, FaYoutube, FaFacebook, FaWhatsapp, FaBars, FaTimes } from "react-icons/fa";
 import { IoMdMail, IoMdPhonePortrait } from "react-icons/io";
 import * as Accordion from "@radix-ui/react-accordion";
@@ -33,21 +33,6 @@ function SectionHeading({ eyebrow, title, description }: { eyebrow: string; titl
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    const applyTheme = () => {
-      if (typeof window === "undefined") return;
-      const root = document.documentElement;
-      const body = document.body;
-      [root, body].forEach((el) => {
-        el.classList.remove("light", "dark");
-        el.classList.add("dark");
-        el.dataset.theme = "dark";
-      });
-    };
-
-    applyTheme();
-  }, []);
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/90 backdrop-blur-xl">
